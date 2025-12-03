@@ -399,10 +399,10 @@ PrefabInstance:
       addedObject: {fileID: 635905651}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 2f8d00bf5057f624e949aef802595da9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 635905650}
+      addedObject: {fileID: 635905649}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 2f8d00bf5057f624e949aef802595da9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 635905649}
+      addedObject: {fileID: 635905650}
   m_SourcePrefab: {fileID: 100100000, guid: 2f8d00bf5057f624e949aef802595da9, type: 3}
 --- !u!1 &635905648 stripped
 GameObject:
@@ -421,8 +421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81574161fe0ae54295db43c00a62ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  jumpForce: 10
-  gravityModifier: 1
+  jumpForce: 700
+  gravityModifier: 1.7
   isOnGround: 1
   gameOver: 0
 --- !u!65 &635905650
@@ -454,7 +454,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635905648}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 65
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 2014335012}
   m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
