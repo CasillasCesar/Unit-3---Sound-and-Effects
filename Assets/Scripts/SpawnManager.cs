@@ -4,15 +4,22 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject obstaclePrefab;
     private Vector3 sparnPos = new Vector3(25, 0, 0);
+
+    private float startDelay = 2, repeatRate = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Instantiate(obstaclePrefab, sparnPos, obstaclePrefab.transform.rotation);
+        //Instantiate(obstaclePrefab, sparnPos, obstaclePrefab.transform.rotation);
+        InvokeRepeating("SpawnObstacle", startDelay,repeatRate);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    void SpawnObstacle()
+    {
+        Instantiate(obstaclePrefab, sparnPos, obstaclePrefab.transform.rotation);
     }
 }
