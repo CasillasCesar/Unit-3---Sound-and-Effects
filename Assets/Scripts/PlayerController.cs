@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     public float jumpForce = 10;
@@ -36,6 +36,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
             gameOver = true;
             Debug.Log("Game Over");
         }
-        isOnGround = true;
+        //isOnGround = true;
     }
 }
