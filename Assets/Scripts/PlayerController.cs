@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnim;
 
     public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,10 +36,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-        }else if (collision.gameObject.CompareTag("Obstacle"))
+            dirtParticle.Play();
+        }
+        else if (collision.gameObject.CompareTag("Obstacle"))
         {
             gameOver = true;
             Debug.Log("Game Over");
+            dirtParticle.Stop();
             explosionParticle.Play();
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
